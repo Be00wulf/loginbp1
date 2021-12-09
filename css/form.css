@@ -3,19 +3,21 @@ body{
     padding: 0;
     background: url(../imagenex/GRIS_4.jpg) no-repeat center top;
     background-size: cover;
-    font-family: monospace;
-    height: 150vh;
-
-
+    font-family: sans-serif;
+    height: 100vh;
 }
 
 
 
 .login-box{
-    width: 500px;
+    width: 320px;
     height: 800;
-    background-color: #bf70e6;  
-    color: #E6D470;
+    /*background-color: #bf70e6;  
+    color: #E6D470;*/
+
+    background-color: black;  
+    color: #fff;
+
     top: 65%;
     left: 65%;
     position: absolute;
