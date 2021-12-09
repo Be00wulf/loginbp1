@@ -28,11 +28,15 @@
           <input type="text" id="user" required>
 
           <!--PASSWORD-->
-           <label for="password">Contraseña</label>
-           <input type="text" id="password" required>
+           <label for="password1">Contraseña</label>
+           <input type="text" id="password1" required>
 
-          <button class="btn btn-danger" id="button" type="submit"></button>
-          <button type="button" class="btn btn-danger">.ڿڰۣ- Crea una cuenta .ڿڰۣ-</button>
+           <div class="mb-3">
+            <span id="invalid"></span>
+           </div>
+
+          <button class="btn btn-danger" id="button" type="submit" onclick ="validarRegistro(email,nombre,password1,password2)">.ڿڰۣ- Ingresar .ڿڰۣ-</button>
+          <button type="button" class="btn btn-danger">.ڿڰۣ- Crear una cuenta .ڿڰۣ-</button>
 
         </form>
         
