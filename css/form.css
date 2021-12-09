@@ -1,6 +1,40 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(..css/imagenex/GRIS_4.jpg) no-repeat center top;
+    background: url(../imagenex/GRIS_4.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: monospace;
+    height: 150vh;
+
+
+}
+
+
+
+.login-box{
+    width: 500px;
+    height: 800;
+    background-color: #bf70e6;  
+    color: #E6D470;
+    top: 65%;
+    left: 65%;
+    position: absolute;
+    transform: translate(-65%, -65%);   /*op*/
+    box-sizing: border-box;
+    padding: 100px 100px;
+
+
+
+}
+
+
+.login-box .avatar{
+    width: 300px;
+    height: 300;
+    border-radius: 65%;
+    position: absolute;
+    top: -5%;
+    left: calc(50%, -50px);
+
 
 }
