@@ -22,7 +22,7 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         email.style.border = '2px solid red'
-        invalid.textContent = 'Correo Incorrecto verifiquelo'
+        invalid.textContent = 'Verificar correo electronico'
         invalid.className = 'text-danger'
     }
     if (testname === true) {
@@ -30,7 +30,7 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         name.style.border = '2px solid red'
-        invalid.textContent = 'Nombre Incorrecto Debe Ingresarlo solo en Mayusculas'
+        invalid.textContent = 'Nombre incorrecto'
         invalid.className = 'text-danger'
     }
     if (testpassword === true) {
@@ -38,7 +38,7 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         password1.style.border = '2px solid red'
-        invalid.textContent = 'Contraseña incorrecta ingresela nuevamente'
+        invalid.textContent = 'Contraseña incorrecta'
         invalid.className = 'text-danger'
     }
     if (testpassword2 === true) {
@@ -46,17 +46,17 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         password2.style.border = '2px solid red'
-        invalid.textContent = 'las contraseñas no coinciden'
+        invalid.textContent = 'Contraseñas distintas'
         invalid.className = 'text-danger'
     }
     if (testemail && testname && testpassword && testpassword2 == true && password1.value === password2.value) {
         invalid.style.display = 'block'
-        invalid.textContent = 'Datos Validados'
+        invalid.textContent = 'Generado'
         invalid.className = 'text-success'
     }
     else {
         invalid.style.display = 'block'
-        invalid.textContent = 'Verifique sus datos e intente denuevo'
+        invalid.textContent = 'Error: verifique datos'
         invalid.className = 'text-danger'
     }
 }
