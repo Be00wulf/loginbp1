@@ -4,10 +4,17 @@ const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
 const invalid = document.getElementById('invalid')
 const form = document.querySelector('.form')
-
-
+var expresionesregulares = {
+    email1: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+    name1: /^[A-Z\s]{10,80}$/,
+    passwordexp: /^[A-Z\s]{10,80}$/,
+}
 function validarRegistro(email, name, password1, password2) {
-
+    form.addEventListener('submit', (e) => e.preventDefault())
+    let testemail = expresionesregulares.email1.test(email.value)
+    let testname = expresionesregulares.name1.test(name.value)
+    let testpassword = expresionesregulares.passwordexp.test(password1.value)
+    let testpassword2 = expresionesregulares.passwordexp.test(password2.value)
 
     if (testemail === true) {
         email.style.border = '1px solid hsl(0, 80%, 86%)'
@@ -15,7 +22,7 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         email.style.border = '2px solid red'
-        invalid.textContent = 'El correo ingresado es incorrecto'
+        invalid.textContent = 'Correo Incorrecto verifiquelo'
         invalid.className = 'text-danger'
     }
     if (testname === true) {
@@ -23,7 +30,7 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         name.style.border = '2px solid red'
-        invalid.textContent = 'Ingresar nombre correcto (MAYUSCULAS)'
+        invalid.textContent = 'Nombre Incorrecto Debe Ingresarlo solo en Mayusculas'
         invalid.className = 'text-danger'
     }
     if (testpassword === true) {
@@ -31,7 +38,7 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         password1.style.border = '2px solid red'
-        invalid.textContent = 'La contraseña es incorrecta'
+        invalid.textContent = 'Contraseña incorrecta ingresela nuevamente'
         invalid.className = 'text-danger'
     }
     if (testpassword2 === true) {
@@ -39,17 +46,17 @@ function validarRegistro(email, name, password1, password2) {
     }
     else {
         password2.style.border = '2px solid red'
-        invalid.textContent = 'Las contraseñas deben coincidir'
+        invalid.textContent = 'las contraseñas no coinciden'
         invalid.className = 'text-danger'
     }
     if (testemail && testname && testpassword && testpassword2 == true && password1.value === password2.value) {
         invalid.style.display = 'block'
-        invalid.textContent = 'Se han validado los datos'
+        invalid.textContent = 'Datos Validados'
         invalid.className = 'text-success'
     }
     else {
         invalid.style.display = 'block'
-        invalid.textContent = 'Error: intente otra vez'
+        invalid.textContent = 'Verifique sus datos e intente denuevo'
         invalid.className = 'text-danger'
     }
 }

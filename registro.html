@@ -19,8 +19,8 @@
         <h1>Registro</h1>
         <div class="form">
             <form>
-                <!--Nombre-->
-                <label for="nombre">.ڿڰۣ- Nombre .ڿڰۣ-</label>
+                <!--Nombre -->
+                <label for="nombre">.ڿڰۣ- Nombre (2 nombres en mayusculas) .ڿڰۣ-</label>
                 <input type="text" id="nombre" required>
 
                 <!--correo-->
@@ -29,11 +29,11 @@
 
                 <!--Contraseña-->
                 <label for="password1">.ڿڰۣ-  Contraseña .ڿڰۣ-</label>
-                <input type="text" id="password1" required>
+                <input type="password" id="password1" required>
 
                 <!--validacion-->
                 <label for="password2">.ڿڰۣ- Validar contraseña .ڿڰۣ-</label>
-                <input type="text" id="password2" required>
+                <input type="password" id="password2" required>
 
                 <div class="mb-3">
                     <span id="invalid"></span>
@@ -41,14 +41,15 @@
 
                 <button class="btn btn-danger" id="button" type="submit" onclick="validarRegistro(email,nombre,password1,password2)">Crear cuenta</button>
                 
+
                 <a class="btn btn-primary" href="./ingreso.html" role="button">.ڿڰۣ- Regresar al Login.ڿڰۣ-</a>  
 
                 <a class="btn btn-primary" href="./cliente.html" role="button">.ڿڰۣ- Ingreso de clientes .ڿڰۣ-</a>    
 
             </form>
         </div>
-        <script src="./js/reg.js"></script>
-
+        
+        <script src="./js/reg.js"></script>  
 
         <!-- Optional JavaScript; choose one of the two! -->
 
