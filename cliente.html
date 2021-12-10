@@ -16,34 +16,37 @@
 <body>
     <div class="login-box">
         <video class="avatar" src="./imagenex/logo .mp4" autoplay muted loop  width="65"></video>
-        <h1>Registro</h1>
+        <h1>Ingreso de clientes</h1>
         <div class="form">
             <form>
                 <!--Nombre-->
                 <label for="nombre">.ڿڰۣ- Nombre .ڿڰۣ-</label>
                 <input type="text" id="nombre" required>
 
-                <!--correo-->
-                <label for="email">.ڿڰۣ- Correo .ڿڰۣ-</label>
-                <input type="email" id="email"  aria-describedby="emailHelp" required>
+                <!--apellido-->
+                <label for="apellido">.ڿڰۣ- Apellido .ڿڰۣ-</label>
+                <input type="text" id="apellido" required>
 
-                <!--Contraseña-->
-                <label for="password1">.ڿڰۣ-  Contraseña .ڿڰۣ-</label>
-                <input type="password" id="password1" required>
+                <!--cui-->
+                <label for="cui">.ڿڰۣ-  -CUI- .ڿڰۣ-</label>
+                <input type="number" id="cui" required>
 
-                <!--validacion-->
-                <label for="password2">.ڿڰۣ- Validar contraseña .ڿڰۣ-</label>
-                <input type="password" id="password2" required>
+                <!--depto-->
+                <label for="depto">.ڿڰۣ- Departamento .ڿڰۣ-</label>
+                <input type="text" id="depto" required>
 
                 <div class="mb-3">
                     <span id="invalid"></span>
                 </div>
-                <button class="btn btn-danger" id="button" type="submit"
-                    onclick="validarRegistro(email,nombre,password1,password2)">Crear cuenta</button>
+                <button class="btn btn-danger" id="button" type="submit" onclick="validarRegistro(nombre,apellido,cui,depto)">Agregar</button>
+
+                <a class="btn btn-primary" href="./ingreso.html" role="button">.ڿڰۣ- Ir al Login .ڿڰۣ-</a> 
+
+                <a class="btn btn-primary" href="./registro.html" role="button">.ڿڰۣ- Ir a registrarme .ڿڰۣ-</a> 
 
             </form>
         </div>
-        <script src="./js/reg.js"></script>
+        
 
 
         <!-- Optional JavaScript; choose one of the two! -->
